@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TI.Form.Controllers\TI.Form.Controllers.csproj" />
+    <ProjectReference Include="..\TI.Form.Presenters\TI.Form.Presenters.csproj" />
+    <ProjectReference Include="..\TI.Form.UseCases\TI.Form.UseCases.csproj" />
+    <ProjectReference Include="..\TI.FormEFCore.Repositories\TI.FormEFCore.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>
