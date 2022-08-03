@@ -1,6 +1,7 @@
 ﻿
 
 using TI.Form.BusinessObjects.DTOs.Create;
+using TI.Form.BusinessObjects.Interfaces.Controllers.Querys;
 
 namespace TI.Form.WebApi
 {
@@ -10,6 +11,12 @@ namespace TI.Form.WebApi
         {
             app.MapPost("/AddTopic", async (CreateTopicDTO Topic, ICreateTopicController controller) =>
             Results.Ok(await controller.CreateTopic(Topic)));
+
+            app.MapGet("/GetTopicById", async (int id, IGetTopicController controller) =>
+            Results.Ok(await controller.GetTopic(id)));
+
+            app.MapGet("/GetTopics", async (IGetTopicsController controller) =>
+            Results.Ok(await controller.GetTopics()));
             return app;
         }
     }

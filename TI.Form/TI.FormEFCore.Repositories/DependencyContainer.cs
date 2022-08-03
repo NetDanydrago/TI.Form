@@ -10,6 +10,7 @@ namespace TI.FormEFCore.Repositories
             services.AddDbContext<Context>(options =>
             options.UseSqlServer(configuration.GetConnectionString(connectionStringName)));
             services.AddScoped<ICommandsRepository, CommandsRepository>();
+            services.AddScoped<IQuerysRepository, QuerysRepository>();
             return services;
         }
     }

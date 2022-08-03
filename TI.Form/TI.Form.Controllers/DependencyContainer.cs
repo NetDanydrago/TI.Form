@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TI.Form.BusinessObjects.Interfaces.Controllers.Querys;
 
 namespace TI.Form.Controllers
 {
@@ -13,6 +14,8 @@ namespace TI.Form.Controllers
         {
             services.AddScoped<ICreateTopicController, CreateTopicController>();
             services.AddScoped<ICreateQuestionController, CreateQuestionController>();
+            services.AddScoped<IGetTopicController, GetTopicController>();
+            services.AddScoped<IGetTopicsController, GetTopicsController>();
             return services;
         }
     }
