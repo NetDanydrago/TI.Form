@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TI.Form.BusinessObjects.Interfaces.Presenters
 {
-    public interface ICreateTopicPresenter
+    public interface ICreateTopicPresenter : ICreateTopicOutputPort
     {
         int Id { get; }
     }

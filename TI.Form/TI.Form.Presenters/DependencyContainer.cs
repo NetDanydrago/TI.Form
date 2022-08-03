@@ -5,11 +5,11 @@ namespace TI.Form.Presenters
     {
         public static IServiceCollection AddPresenters(this IServiceCollection services)
         {
-            services.AddScoped<CreatePresenter>();
-            services.AddScoped<ICreatePresenter, CreatePresenter>(
-                provider => provider.GetService<CreatePresenter>());
-            services.AddScoped<ICreateOutputPort, CreatePresenter>(
-                provider => provider.GetService<CreatePresenter>());
+            services.AddScoped<CreateTopicPresenter>();
+            services.AddScoped<ICreateTopicPresenter, CreateTopicPresenter>(
+                provider => provider.GetService<CreateTopicPresenter>());
+            services.AddScoped<ICreateTopicOutputPort, CreateTopicPresenter>(
+                provider => provider.GetService<CreateTopicPresenter>());
             return services;
         }
     }

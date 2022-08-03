@@ -4,7 +4,7 @@ namespace TI.Form.IoC
 {
     public static class DependencyContainer
     {
-        public static IServiceCollection AddTI.FormServices(this IServiceCollection services,
+        public static IServiceCollection AddTIFormServices(this IServiceCollection services,
             IConfiguration configuration, string connectionStringName)
         {
             services.AddRepositories(configuration, connectionStringName);

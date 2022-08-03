@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using TI.Form.BusinessObjects.DTOs.Create;
 
-namespace TI.Form.BusinessObjects.Interfaces.Controllers
+namespace TI.Form.BusinessObjects.Interfaces.Ports
 {
-    public interface ICreateController
+    public interface ICreateQuestionInputPort
     {
-        ValueTask<int> CreateOrder(CreateDTO createOrderDTO);
+        ValueTask Handle(CreateQuestionDTO questionDTO);
     }
 }

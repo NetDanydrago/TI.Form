@@ -1,8 +1,12 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace TI.Form.Presenters
 {
-    public class CreatePresenter : ICreatePresenter
+    public class CreateTopicPresenter : ICreateTopicPresenter
     {
         public int Id { get; private set; }
 

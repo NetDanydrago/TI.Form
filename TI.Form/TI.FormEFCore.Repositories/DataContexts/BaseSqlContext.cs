@@ -13,11 +13,12 @@ namespace TI.FormEFCore.Repositories.DataContexts
         //update-database InitialCreate -p TI.FormEFCore.Repositories -s TI.FormEFCore.Repositories -context BaseSqlContextContext
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB; Database = CleanNET20");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB; Database = FormNET20");
         }
 
-        public DbSet<Create> Creates { get; set; }
-        public DbSet<Detail> Details { get; set; }
+        public DbSet<Topic> Topics { get; set; }
+        public DbSet<Entities.Question> Questions { get; set; }
+        public DbSet<Entities.Option> Options { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

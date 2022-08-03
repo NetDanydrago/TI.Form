@@ -2,9 +2,10 @@
 
 namespace TI.Form.BusinessObjects.POCOEntities
 {
-    public class TopicQuestion
+    public class Question
     {
         public int Id { get; set; }
-        public QuestionType Type { get; set; }
+        public string Text { get; set; }
+        public int OrderNumber { get; set; }
     }
 }

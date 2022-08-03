@@ -9,7 +9,7 @@ namespace TI.Form.WebApi
         {
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddTI.FormServices(builder.Configuration, "NorthWindDBNET20");
+            builder.Services.AddTIFormServices(builder.Configuration, "FORMSDBNET20");
             return builder.Build();
         }
 
@@ -19,7 +19,8 @@ namespace TI.Form.WebApi
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
-                app.UseCreateEndpoints();
+                app.UseTopicEndpoints();
+                app.UseQuestionEndpoints();
 
             }
             return app;

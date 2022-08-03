@@ -14,8 +14,9 @@ namespace TI.FormEFCore.Repositories.DataContexts
         {
         }
 
-        public DbSet<Create> Creates { get; set; }
-        public DbSet<Detail> Details { get; set; }
+        public DbSet<Topic> Topics { get; set; }
+        public DbSet<Entities.Question> Questions { get; set; }
+        public DbSet<Entities.Option> Options { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

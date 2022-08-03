@@ -4,14 +4,15 @@ using System.Text;
 
 namespace TI.FormEFCore.Repositories.Entities
 {
-    public class Option
+    public class Question
     {
         public int Id { get; set; }
         public string Text { get; set; }
-        public bool IsCorrect { get; set; }
+        public int OrderNumber { get; set; }
 
-        public int QuestionId { get; set;  }
-        public Question Question { get; set; }
 
+        public List<Option> Options { get; set; }
+        public Topic Topic { get; set; }
+        public int TopicId { get; set; }
     }
 }

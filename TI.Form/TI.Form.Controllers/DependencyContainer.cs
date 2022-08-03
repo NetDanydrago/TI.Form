@@ -11,7 +11,8 @@ namespace TI.Form.Controllers
     {
         public static IServiceCollection AddControllers(this IServiceCollection services)
         {
-            services.AddScoped<ICreateController, CreateController>();
+            services.AddScoped<ICreateTopicController, CreateTopicController>();
+            services.AddScoped<ICreateQuestionController, CreateQuestionController>();
             return services;
         }
     }

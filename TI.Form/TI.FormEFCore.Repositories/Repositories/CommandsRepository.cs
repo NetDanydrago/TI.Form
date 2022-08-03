@@ -16,9 +16,29 @@ namespace TI.FormEFCore.Repositories.Repositories
             Context = context;
         }
 
-        public async ValueTask Create(TopicOptionQuestionAggregate aggregate)
+        public async ValueTask CreateTopic(Topic topic)
         {
-            await Context.AddAsync(aggregate);
+            await Context.AddAsync(topic);
+        }
+
+        public async ValueTask CreateTopicQuestion(QuestionAggregate aggregate)
+        {
+            var Question = new Entities.Question()
+            {
+                TopicId = aggregate.TopicId,
+                OrderNumber = aggregate.OrderNumber,
+                Text = aggregate.Text
+            };
+            await Context.AddAsync(Question);
+            foreach(var Option in aggregate.Options)
+            {
+                await Context.AddAsync(new Option()
+                {
+                    Question = Question,
+                    Text = Option.TextOption,
+                    IsCorrect = Option.IsCorrect,
+                });
+            }
         }
 
         public async ValueTask SaveChanges()

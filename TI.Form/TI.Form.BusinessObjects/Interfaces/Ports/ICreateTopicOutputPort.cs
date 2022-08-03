@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TI.Form.BusinessObjects.Interfaces.Ports
 {
-    internal interface ICreateTopicOutputPort
+    public interface ICreateTopicOutputPort
     {
         ValueTask Handle(int topicId);
     }

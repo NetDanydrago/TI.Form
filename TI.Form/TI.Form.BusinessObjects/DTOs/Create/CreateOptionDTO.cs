@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace TI.Form.BusinessObjects.DTOs.Create
 {
-    public class CreateDTO
+    public class CreateOptionDTO
     {
-
+        public string TextOption { get; set; }
+        public bool IsCorrect { get; set; }
     }
 }

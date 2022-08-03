@@ -18,4 +18,8 @@
     <ProjectReference Include="..\TI.Form.BusinessObjects\TI.Form.BusinessObjects.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+  </ItemGroup>
+
 </Project>

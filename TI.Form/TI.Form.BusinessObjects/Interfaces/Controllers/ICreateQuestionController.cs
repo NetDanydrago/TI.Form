@@ -7,8 +7,8 @@ using TI.Form.BusinessObjects.DTOs.Create;
 
 namespace TI.Form.BusinessObjects.Interfaces.Controllers
 {
-    public interface ICreateTopiController
+    public interface ICreateQuestionController
     {
-        ValueTask<int> CreateTopic(CreateTopicDTO createOrderDTO);
+        ValueTask CreateQuestion(CreateQuestionDTO createQuestionDTO);
     }
 }

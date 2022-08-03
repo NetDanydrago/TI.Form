@@ -4,7 +4,8 @@
     {
         public static IServiceCollection AddUseCasesServices(this IServiceCollection services)
         {
-            services.AddScoped<ICreateInputPort, CreateInteractor>();
+            services.AddScoped<ICreateTopicInputPort, CreateTopicInteractor>();
+            services.AddScoped<ICreateQuestionInputPort, CreateQuestionInteractor>();
             return services;
         }
     }
