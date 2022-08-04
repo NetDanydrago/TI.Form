@@ -1,0 +1,138 @@
+﻿@page "/{TopicId:int}"
+<div class="questionforms container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm" style="padding-right:0px;">
+                @foreach(var Question in Questions)
+                {
+                    <div class="container-question">
+                        <span class="span-ordernumber">@(Question.OrderNumber)</span>
+                         <div class="card" style="width:98%;">
+                          <div class="card-body">
+                            @Question.Question
+                          </div>
+                        </div>
+                        <button class="button-question" @onclick="() => ShowAnswerQuestion(Question)">Mostrar Respuesta</button>
+                    </div>
+                    @foreach (var O in Question.Options)
+                    {
+                        <div class="container-check correct">
+                        <input type="radio" style="margin-top:9px;" name="@Question.OrderNumber" class="checkmark radio">
+                            @if(IndexAnwser == Question.OrderNumber)
+                            {
+                                @if(O.IsCorrect == true)
+                                {
+                                      <div class="w-25 p-3"style="color:green" >@O.TextOption</div>
+                                }
+                                else
+                                {
+                                    <div class="w-25 p-3"style="color:red" >@O.TextOption</div>
+                                }    
+                            }
+                            else
+                            {
+                                <div class="w-25 p-3" >@O.TextOption</div>
+                            }
+                        </div>
+                    };
+                }
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+@code{
+    [Parameter]
+    public int TopicId { get; set; }
+    int IndexAnwser { get; set;}
+
+
+    List<CreateQuestionDTO> Questions = new List<CreateQuestionDTO>()
+    {
+        new CreateQuestionDTO()
+       {
+           TopicId = 1,
+           OrderNumber = 1,
+           Question = "Un párrafo es una unidad de un texto compuesta por una o varias oraciones, que comienza con una mayúscula y que termina con un punto y aparte. Los textos se organizan de manera tal que cada párrafo trata sobre una idea central. Generalmente, la primera oración de cada párrafo suele explicitar cuál es el punto principal que se desarrollará.",
+           Options = new List<CreateOptionDTO>()
+           {
+               new CreateOptionDTO()
+               {
+                   TextOption = "Esta es la Respuesta correcta",
+                   IsCorrect = true,
+               },
+               new CreateOptionDTO()
+               {
+                   TextOption = "Esta es la Respuesta incorrecta",
+                   IsCorrect = false,
+               },
+                new CreateOptionDTO()
+               {
+                   TextOption = "Esta es la Respuesta incorrecta",
+                   IsCorrect = false,
+               }
+           }.Shuffle()
+         },
+        new CreateQuestionDTO()
+        {
+           TopicId = 1,
+           OrderNumber = 2,
+           Question = "Un párrafo es una unidad de un texto compuesta por una o varias oraciones, que comienza con una mayúscula y que termina con un punto y aparte. Los textos se organizan de manera tal que cada párrafo trata sobre una idea central. Generalmente, la primera oración de cada párrafo suele explicitar cuál es el punto principal que se desarrollará.",
+           Options = new List<CreateOptionDTO>()
+           {
+               new CreateOptionDTO()
+               {
+                   TextOption = "Esta es la Respuesta correcta",
+                   IsCorrect = true,
+               },
+               new CreateOptionDTO()
+               {
+                   TextOption = "Esta es la Respuesta incorrecta",
+                   IsCorrect = false,
+               },
+                new CreateOptionDTO()
+               {
+                   TextOption = "Esta es la Respuesta incorrecta",
+                   IsCorrect = false,
+               }
+            }.Shuffle()
+         },
+        new CreateQuestionDTO()
+        {
+           TopicId = 1,
+           OrderNumber = 3,
+           Question = "Un párrafo es una unidad de un texto compuesta por una o varias oraciones, que comienza con una mayúscula y que termina con un punto y aparte. Los textos se organizan de manera tal que cada párrafo trata sobre una idea central. Generalmente, la primera oración de cada párrafo suele explicitar cuál es el punto principal que se desarrollará.",
+           Options = new List<CreateOptionDTO>()
+           {
+               new CreateOptionDTO()
+               {
+                   TextOption = "Esta es la Respuesta correcta",
+                   IsCorrect = true,
+               },
+               new CreateOptionDTO()
+               {
+                   TextOption = "Esta es la Respuesta incorrecta",
+                   IsCorrect = false,
+               },
+                new CreateOptionDTO()
+               {
+                   TextOption = "Esta es la Respuesta incorrecta",
+                   IsCorrect = false,
+               }
+           }.Shuffle()
+        }
+    };
+   
+
+    int CountNumber;
+    int Index;
+
+    void ShowAnswerQuestion(CreateQuestionDTO question)
+    {
+        IndexAnwser = question.OrderNumber;
+    }
+
+
+}

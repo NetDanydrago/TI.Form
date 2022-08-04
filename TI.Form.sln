@@ -5,37 +5,39 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application Business Rules", "Application Business Rules", "{0C4E70BE-09F2-449E-B8AA-3024062A03B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI.Form.BusinessObjects", "TI.Form\TI.Form.BusinessObjects\TI.Form.BusinessObjects.csproj", "{0DFAC4C3-CC72-4C8D-8CDB-D758BFC3360D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TI.Form.BusinessObjects", "TI.Form\TI.Form.BusinessObjects\TI.Form.BusinessObjects.csproj", "{0DFAC4C3-CC72-4C8D-8CDB-D758BFC3360D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI.Form.UseCases", "TI.Form\TI.Form.UseCases\TI.Form.UseCases.csproj", "{380752B6-80FB-4B2E-8A3A-7536F206492E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TI.Form.UseCases", "TI.Form\TI.Form.UseCases\TI.Form.UseCases.csproj", "{380752B6-80FB-4B2E-8A3A-7536F206492E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enterprise Business Rules", "Enterprise Business Rules", "{7B213DBD-D58A-4308-A64F-DDE89144119F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI.Form.Entities", "TI.Form\TI.Form.Entities\TI.Form.Entities.csproj", "{00ABA12B-2AAA-4CE8-9785-084294AFD808}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TI.Form.Entities", "TI.Form\TI.Form.Entities\TI.Form.Entities.csproj", "{00ABA12B-2AAA-4CE8-9785-084294AFD808}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frameworks And Drivers", "Frameworks And Drivers", "{8732DE52-797A-43B1-9710-D0888C4052FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UIs", "UIs", "{00228077-9CC7-4D3C-A815-EBDAFEA42F99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI.Form.WebApi", "TI.Form\TI.Form.WebApi\TI.Form.WebApi.csproj", "{6294D142-7E85-4862-AF0A-2CACCD7AE166}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TI.Form.WebApi", "TI.Form\TI.Form.WebApi\TI.Form.WebApi.csproj", "{6294D142-7E85-4862-AF0A-2CACCD7AE166}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interface Adapters", "Interface Adapters", "{6B5DF9CF-6EE4-49BF-B073-6DF964270D27}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controllers", "Controllers", "{31CD6D58-908A-4F57-A331-FFF6899C3FDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI.Form.Controllers", "TI.Form\TI.Form.Controllers\TI.Form.Controllers.csproj", "{B1B26D59-D5DF-4C6B-8B6A-947313F39C3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TI.Form.Controllers", "TI.Form\TI.Form.Controllers\TI.Form.Controllers.csproj", "{B1B26D59-D5DF-4C6B-8B6A-947313F39C3A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{17A51872-4CFB-4448-9BA8-2EABAF6C3FBF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{03347ABE-2572-43A1-8E0F-84BDB5223C28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI.FormEFCore.Repositories", "TI.Form\TI.FormEFCore.Repositories\TI.FormEFCore.Repositories.csproj", "{4D4909C7-CF13-4716-BB73-852AAC6E08D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TI.FormEFCore.Repositories", "TI.Form\TI.FormEFCore.Repositories\TI.FormEFCore.Repositories.csproj", "{4D4909C7-CF13-4716-BB73-852AAC6E08D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presenters", "Presenters", "{FDF9B66A-3C75-468C-8DDD-FCD861B7FD8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI.Form.Presenters", "TI.Form\TI.Form.Presenters\TI.Form.Presenters.csproj", "{AC187E5A-E474-4490-8EE8-AD1D31889CF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TI.Form.Presenters", "TI.Form\TI.Form.Presenters\TI.Form.Presenters.csproj", "{AC187E5A-E474-4490-8EE8-AD1D31889CF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI.Form.IoC", "TI.Form\TI.Form.IoC\TI.Form.IoC.csproj", "{123B6AD3-00BA-4990-B403-E84E655E9278}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TI.Form.IoC", "TI.Form\TI.Form.IoC\TI.Form.IoC.csproj", "{123B6AD3-00BA-4990-B403-E84E655E9278}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI.Form.Blazor", "TI.Form.Blazor\TI.Form.Blazor.csproj", "{CC38E30C-2BF5-455E-A163-CE87F228DE75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{123B6AD3-00BA-4990-B403-E84E655E9278}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{123B6AD3-00BA-4990-B403-E84E655E9278}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{123B6AD3-00BA-4990-B403-E84E655E9278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC38E30C-2BF5-455E-A163-CE87F228DE75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC38E30C-2BF5-455E-A163-CE87F228DE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC38E30C-2BF5-455E-A163-CE87F228DE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC38E30C-2BF5-455E-A163-CE87F228DE75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +99,7 @@ Global
 		{FDF9B66A-3C75-468C-8DDD-FCD861B7FD8B} = {6B5DF9CF-6EE4-49BF-B073-6DF964270D27}
 		{AC187E5A-E474-4490-8EE8-AD1D31889CF9} = {FDF9B66A-3C75-468C-8DDD-FCD861B7FD8B}
 		{123B6AD3-00BA-4990-B403-E84E655E9278} = {6B5DF9CF-6EE4-49BF-B073-6DF964270D27}
+		{CC38E30C-2BF5-455E-A163-CE87F228DE75} = {00228077-9CC7-4D3C-A815-EBDAFEA42F99}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F732BE0F-5767-4A1E-A496-555E277838A3}

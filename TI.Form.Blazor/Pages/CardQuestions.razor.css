@@ -1,0 +1,104 @@
+﻿/*CSS QuestionForms*/
+.questionforms {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 1px solid;
+    box-shadow: 1px 1px 10px 2px #888888;
+    margin-bottom: 17px;
+}
+
+
+.button-question {
+    border: 2px solid;
+    border-color: #F76300;
+    background-color: #F76300;
+    border-radius: 4px;
+    color: white;
+    margin-top: 1%;
+    margin-left: 80%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 15px;
+    position: absolute;
+    cursor: pointer;
+    z-index:10;
+}
+
+    .button-question:focus {
+        outline: 0;
+    }
+
+
+.container-question {
+    display: block;
+    position: relative;
+    padding-left: 17px;
+}
+
+.span-ordernumber {
+    position: absolute;
+    top: 8px;
+    left: 0px;
+}
+
+
+
+/*CheckBox-Radio Question*/
+.container-check {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+/* The container */
+.container-input {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .container-input.group {
+        top: 6px;
+        font-size: 11px;
+        padding-left: 27px;
+        padding-top: 3px;
+        padding-right: 15px;
+    }
+
+    /* Hide the browser's default checkbox */
+    .container-input input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+    .checkmark.radio {
+        height: 22px;
+        width: 22px;
+        border: 3px solid #f76300;
+        background-color: white;
+        border-radius: 50%;
+    }
+
