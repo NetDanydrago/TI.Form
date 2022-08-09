@@ -1,0 +1,38 @@
+﻿<div class="header">
+            @if(IsVisibleAnswer)
+            {
+                <a @onclick="() => IsVisibleAnswerChanged.InvokeAsync(false)" class="btn btn-danger">Ocultar Respuesta</a>
+            }
+            else
+            {
+                 <a  @onclick="() => IsVisibleAnswerChanged.InvokeAsync(true)" class="btn btn-danger">Mostrar Respuesta</a>
+            }
+  <div class="header-right">
+        @if (IsVisibleImage.HasValue)
+        {
+            @if (IsVisibleImage.Value)
+            {
+                <a @onclick="() => IsVisibleImageChanged.InvokeAsync(false)" class="btn btn-light" >Mostrar Imagen</a>
+            }
+            else
+            {
+                <a @onclick="() => IsVisibleImageChanged.InvokeAsync(true)" class="btn btn-light" >Ocultar Imagen</a>   
+            }
+        }
+
+  </div>
+</div>
+
+@code{
+    [Parameter]
+    public bool IsVisibleAnswer { get; set; } 
+
+    [Parameter]
+    public EventCallback<bool> IsVisibleAnswerChanged { get; set; }
+
+   [Parameter]
+    public bool? IsVisibleImage { get; set; } = null;
+
+    [Parameter]
+    public EventCallback<bool> IsVisibleImageChanged { get; set; }
+}

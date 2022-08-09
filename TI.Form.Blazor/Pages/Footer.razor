@@ -1,0 +1,53 @@
+﻿<div class="footer">
+  <a href="#default" class="logo">Preguntas en Total @TotalQuestion</a>
+    <a href="#default" class="logo">Numero de la Pregunta @(IndexQuestion+1)</a>
+  <div class="footer-right">
+        @if(IndexQuestion == 0)
+        {
+            <a @onclick="Next" href="#about">Siguiente</a>
+        }
+        else if(IndexQuestion == TotalQuestion)
+        {
+            <a @onclick="Before" href="#contact">Anterior</a>
+        }
+        else
+        {
+            <a @onclick="Before" href="#contact">Anterior</a>
+            <a @onclick="Next" href="#about">Siguiente</a>
+        }
+
+  </div>
+</div>
+
+@code{
+
+    [Parameter]
+    public int TotalQuestion { get; set; }
+
+    [Parameter]
+    public int IndexQuestion { get; set; } 
+
+    [Parameter]
+    public EventCallback<int> IndexQuestionChanged { get; set; }
+
+    void Next()
+    {
+        if(IndexQuestion < TotalQuestion)
+        {
+            IndexQuestion++;
+            IndexQuestionChanged.InvokeAsync(IndexQuestion);       
+        }
+        StateHasChanged();
+    }
+
+    void Before()
+    {
+        if(IndexQuestion > 0)
+        {
+            IndexQuestion--;
+            IndexQuestionChanged.InvokeAsync(IndexQuestion);
+        }
+        StateHasChanged();
+    }
+
+}

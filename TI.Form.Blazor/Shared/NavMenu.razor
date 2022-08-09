@@ -6,7 +6,6 @@
         </button>
     </div>
 </div>
-
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
         <div class="nav-item px-3">
@@ -23,45 +22,10 @@
 </div>
 
 @code {
-    List<Topic> Topics = new List<Topic>(){
-        new Topic
-        {
-            Id = 1,
-            Title = "Tema de las preguntas",
-            Description = "Descripcion de las preguntas",
-        },
-        new Topic
-        {
-            Id = 2,
-            Title = "Tema de las preguntas",
-            Description = "Descripcion de las preguntas",
-        },
-        new Topic
-        {
-            Id = 3,
-            Title = "Tema de las preguntas",
-            Description = "Descripcion de las preguntas",
-        },
-        new Topic
-        {
-            Id = 4,
-            Title = "Tema de las preguntas",
-            Description = "Descripcion de las preguntas",
-        },
-        new Topic
-        {
-            Id = 5,
-            Title = "Tema de las preguntas",
-            Description = "Descripcion de las preguntas",
-        },
-        new Topic
-        {
-            Id = 6,
-            Title = "Tema de las preguntas",
-            Description = "Descripcion de las preguntas",
-        }
 
-    };
+    [Parameter]
+    public List<Topic> Topics { get; set; }
+
 
     private bool collapseNavMenu = true;
 

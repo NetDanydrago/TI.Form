@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -14,5 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TI.Form\TI.Form.BusinessObjects\TI.Form.BusinessObjects.csproj" />
   </ItemGroup>
+
+ 
 
 </Project>

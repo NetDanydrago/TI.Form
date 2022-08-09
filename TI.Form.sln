@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TI.Form.Presenters", "TI.Fo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TI.Form.IoC", "TI.Form\TI.Form.IoC\TI.Form.IoC.csproj", "{123B6AD3-00BA-4990-B403-E84E655E9278}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI.Form.Blazor", "TI.Form.Blazor\TI.Form.Blazor.csproj", "{CC38E30C-2BF5-455E-A163-CE87F228DE75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TI.Form.Blazor", "TI.Form.Blazor\TI.Form.Blazor.csproj", "{CC38E30C-2BF5-455E-A163-CE87F228DE75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
