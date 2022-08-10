@@ -11,6 +11,7 @@ namespace TI.Form.BusinessObjects.DTOs.Create
        public int TopicId { get; set; }
        public string Question { get; set; }
        public int OrderNumber { get; set; }
+       public string ImageUrl { get; set; }
        public List<CreateOptionDTO> Options { get; set; }
     }
 }

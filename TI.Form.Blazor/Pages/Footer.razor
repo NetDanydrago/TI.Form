@@ -1,19 +1,19 @@
 ﻿<div class="footer">
-  <a href="#default" class="logo">Preguntas en Total @TotalQuestion</a>
-    <a href="#default" class="logo">Numero de la Pregunta @(IndexQuestion+1)</a>
+  <a  class="logo">Preguntas en Total @TotalQuestion</a>
+    <a  class="logo">Numero de la Pregunta @(IndexQuestion+1)</a>
   <div class="footer-right">
         @if(IndexQuestion == 0)
         {
-            <a @onclick="Next" href="#about">Siguiente</a>
+            <a class="btn btn-success" @onclick="Next" href="#about">Siguiente</a>
         }
         else if(IndexQuestion == TotalQuestion-1)
         {
-            <a @onclick="Before" href="#contact">Anterior</a>
+            <a class="btn btn-success" @onclick="Before" href="#contact">Anterior</a>
         }
         else
         {
-            <a @onclick="Before" href="#contact">Anterior</a>
-            <a @onclick="Next" href="#about">Siguiente</a>
+            <a class="btn btn-success" @onclick="Before" href="#contact">Anterior</a>
+            <a class="btn btn-success" @onclick="Next" href="#about">Siguiente</a>
         }
 
   </div>
@@ -37,7 +37,6 @@
             IndexQuestion++;
             IndexQuestionChanged.InvokeAsync(IndexQuestion);       
         }
-        StateHasChanged();
     }
 
     void Before()
@@ -47,7 +46,6 @@
             IndexQuestion--;
             IndexQuestionChanged.InvokeAsync(IndexQuestion);
         }
-        StateHasChanged();
     }
 
 }

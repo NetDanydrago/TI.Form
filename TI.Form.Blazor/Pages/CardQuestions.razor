@@ -1,13 +1,8 @@
 ﻿@page "/"
-<Header @bind-IsVisibleAnswer="ShowAnwser" ></Header>
+<Header @bind-IsVisibleAnswer="ShowAnwser" @bind-IsVisibleImage="IsVisibleImage"  HasImage="!String.IsNullOrEmpty(Questions[IndexQuestion].ImageUrl)" ></Header>
 <div class="container-form">
     <div class="row-form">
-        <div class="col-3">
-            <div class="sidebar">
-
-            </div>
-        </div>
-        <div class="col-9">
+        <div class="col-12">
             <div class="questionforms container">
                 <div class="container">
                     <div class="row">
@@ -40,7 +35,13 @@
                                             <div class="w-25 p-3">@O.TextOption</div>
                                         }
                                     </div>
-                                };
+                                }
+                                @if (IsVisibleImage)
+                                {
+                                    <div>
+                                        Esta es Una Imagen
+                                    </div>
+                                }
                         </div>
                     </div>
                 </div>
@@ -53,95 +54,3 @@
 <Footer @bind-IndexQuestion="IndexQuestion" TotalQuestion="Questions.Count"></Footer>
 
 
-@code {
-
-    bool ShowAnwser { get; set; }
-
-
-    int IndexQuestion { get; set; }
-
-
-    List<CreateQuestionDTO> Questions = new List<CreateQuestionDTO>()
-    {
-        new CreateQuestionDTO()
-       {
-           TopicId = 1,
-           OrderNumber = 1,
-           Question = "Esta es la pregunta 1 Un párrafo es una unidad de un texto compuesta por una o varias oraciones, que comienza con una mayúscula y que termina con un punto y aparte. Los textos se organizan de manera tal que cada párrafo trata sobre una idea central. Generalmente, la primera oración de cada párrafo suele explicitar cuál es el punto principal que se desarrollará.",
-           Options = new List<CreateOptionDTO>()
-           {
-               new CreateOptionDTO()
-               {
-                   TextOption = "Esta es la Respuesta correcta",
-                   IsCorrect = true,
-               },
-               new CreateOptionDTO()
-               {
-                   TextOption = "Esta es la Respuesta incorrecta",
-                   IsCorrect = false,
-               },
-                new CreateOptionDTO()
-               {
-                   TextOption = "Esta es la Respuesta incorrecta",
-                   IsCorrect = false,
-               }
-           }.Shuffle()
-         },
-        new CreateQuestionDTO()
-        {
-           TopicId = 1,
-           OrderNumber = 2,
-           Question = "Esta es la pregunta 2 Un párrafo es una unidad de un texto compuesta por una o varias oraciones, que comienza con una mayúscula y que termina con un punto y aparte. Los textos se organizan de manera tal que cada párrafo trata sobre una idea central. Generalmente, la primera oración de cada párrafo suele explicitar cuál es el punto principal que se desarrollará.",
-           Options = new List<CreateOptionDTO>()
-           {
-               new CreateOptionDTO()
-               {
-                   TextOption = "Esta es la Respuesta correcta",
-                   IsCorrect = true,
-               },
-               new CreateOptionDTO()
-               {
-                   TextOption = "Esta es la Respuesta incorrecta",
-                   IsCorrect = false,
-               },
-                new CreateOptionDTO()
-               {
-                   TextOption = "Esta es la Respuesta incorrecta",
-                   IsCorrect = false,
-               }
-            }.Shuffle()
-         },
-        new CreateQuestionDTO()
-        {
-           TopicId = 1,
-           OrderNumber = 3,
-           Question = "Esta es la pregunta 3 Un párrafo es una unidad de un texto compuesta por una o varias oraciones, que comienza con una mayúscula y que termina con un punto y aparte. Los textos se organizan de manera tal que cada párrafo trata sobre una idea central. Generalmente, la primera oración de cada párrafo suele explicitar cuál es el punto principal que se desarrollará.",
-           Options = new List<CreateOptionDTO>()
-           {
-               new CreateOptionDTO()
-               {
-                   TextOption = "Esta es la Respuesta correcta",
-                   IsCorrect = true,
-               },
-               new CreateOptionDTO()
-               {
-                   TextOption = "Esta es la Respuesta incorrecta",
-                   IsCorrect = false,
-               },
-                new CreateOptionDTO()
-               {
-                   TextOption = "Esta es la Respuesta incorrecta",
-                   IsCorrect = false,
-               }
-           }.Shuffle()
-        }
-    };
-
-
-    void ShowAnswerQuestion()
-    {
-        ShowAnwser = true;
-    }
-
-
-}
