@@ -4,6 +4,7 @@ namespace TI.Form.Blazor.Pages
 {
     public partial class CardQuestions
     {
+        //Comentario
         bool ShowAnwser { get; set; }
         int IndexQuestion { get; set; }
         bool IsVisibleImage { get; set; }
